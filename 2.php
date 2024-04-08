@@ -10,9 +10,9 @@ $charset = "UTF-8";
 
 $smtp = new SendMailSmtpClass($username, $password, $host, $from, $port, $charset);
 
-$mailTo = 'chuck@example.com';
-$subject = 'Test';
+$mailTo = "chuck@example.com";
+$subject = "Test";
 $message = "Test message";
-$headers = "From: elvis@example.com\r\nReply-To: elvis@example.com\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+$headers = "To: Chuck Berry <chuck@example.com>\r\nReply-To: elvis@example.com\r\nContent-Type: text/plain; charset=UTF-8\r\n";
 
 echo $smtp->send($mailTo, $subject, $message, $headers);
